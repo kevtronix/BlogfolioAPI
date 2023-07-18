@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include 
 from rest_framework.routers import DefaultRouter
 from blog.views import BlogPostViewSet
+from authentication.views import LoginView
 
 
 # Create a router and register our viewsets with it.
@@ -25,6 +26,7 @@ router = DefaultRouter()
 router.register(r'blogs', BlogPostViewSet)
 
 urlpatterns = [
+    path('api/login/', LoginView.as_view()),
     path('api/admin/', admin.site.urls),
     path('api/', include(router.urls)),
 ]
