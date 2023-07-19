@@ -13,6 +13,6 @@ class LoginView(APIView):
         password = request.data.get("password")
         user = authenticate(username=username, password=password)
         if user is None:
-            return Response({"error": "Invalid data"})
+            return Response({"error": "Invalid data"}, status=400)
         token = Token.objects.get_or_create(user=user)
-        return Response({"token": token.key})
+        return Response({"token": token[0].key})
