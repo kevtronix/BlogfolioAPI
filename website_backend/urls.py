@@ -18,7 +18,11 @@ from django.contrib import admin
 from django.urls import path, include 
 from rest_framework.routers import DefaultRouter
 from blog.views import BlogPostViewSet
-from authentication.views import LoginView
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+    TokenVerifyView
+)
 
 
 # Create a router and register our viewsets with it.
@@ -26,7 +30,9 @@ router = DefaultRouter()
 router.register(r'blogs', BlogPostViewSet)
 
 urlpatterns = [
-    path('api/login/', LoginView.as_view()),
+    path('api/token/', TokenObtainPairView.as_view()),
+    path('api/token/refresh/', TokenRefreshView.as_view()),
+    path('api/token/verify/', TokenVerifyView.as_view()),
     path('api/admin/', admin.site.urls),
     path('api/', include(router.urls)),
 ]
