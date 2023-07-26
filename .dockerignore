@@ -1,0 +1,50 @@
+# Django #
+##########
+*.log
+*.pot
+*.pyc
+__pycache__/
+media
+db.sqlite3
+
+# Docker #
+##########
+Dockerfile
+.dockerignore
+docker-compose*.yml
+.env
+
+# Python #
+##########
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+develop-eggs/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg
+MANIFEST
+
+
+
+# Git #
+#######
+.git
+.gitignore
+.gitattributes
