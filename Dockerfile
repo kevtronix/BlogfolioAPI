@@ -20,5 +20,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Run app.py when the container launches
-CMD python manage.py makemigrations && python manage.py migrate && \
-exec gunicorn website_backend.wsgi:application --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0
+CMD python manage.py makemigrations && python manage.py migrate && exec gunicorn website_backend.wsgi:application --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0
