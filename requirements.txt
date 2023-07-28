@@ -4,7 +4,7 @@ django-cors-headers==4.2.0
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.2.2
 gunicorn==21.2.0
-mysqlclient==2.2.0
+mysqlclient==2.1.0
 packaging==23.1
 protobuf==4.21.12
 PyJWT==2.8.0
