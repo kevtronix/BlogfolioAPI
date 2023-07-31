@@ -30,9 +30,9 @@ router = DefaultRouter()
 router.register(r'blogs', BlogPostViewSet)
 
 urlpatterns = [
-    path('api/token/', TokenObtainPairView.as_view()),
-    path('api/token/refresh/', TokenRefreshView.as_view()),
-    path('api/token/verify/', TokenVerifyView.as_view()),
+    path('token/', TokenObtainPairView.as_view()),
+    path('token/refresh/', TokenRefreshView.as_view()),
+    path('token/verify/', TokenVerifyView.as_view()),
     path('api/admin/', admin.site.urls),
     path('', include(router.urls)),
 ]
