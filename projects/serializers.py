@@ -1,7 +1,9 @@
 import re
+
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.encoding import smart_str
 from rest_framework import serializers
+
 from .models import Project, Technology
 
 
