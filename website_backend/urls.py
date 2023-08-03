@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include 
 from rest_framework.routers import DefaultRouter
 from blog.views import BlogPostViewSet
+from projects.views import ProjectViewSet
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -28,6 +29,7 @@ from rest_framework_simplejwt.views import (
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
 router.register(r'blogs', BlogPostViewSet)
+router.register(r'projects', ProjectViewSet)
 
 urlpatterns = [
     path('token/', TokenObtainPairView.as_view()),
