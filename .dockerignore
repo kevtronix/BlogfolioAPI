@@ -1,5 +1,6 @@
 # Django #
 ##########
+*.db
 *.log
 *.pot
 *.pyc
