@@ -38,7 +38,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     technologies = CreateSlugRelatedField(
         many=True,
         slug_field="name",
-        queryset=Technology.objects.all(),
+        queryset=Technology.objects.all().order_by("name"),
         allow_null=True,
         required=True,
     )
